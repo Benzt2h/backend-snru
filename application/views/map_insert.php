@@ -8,7 +8,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Map List</title>
+	<title>Add Map</title>
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	 crossorigin="anonymous">
@@ -36,55 +36,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<a href="<?php echo site_url('Welcome/logout');?>"><button type="button" class="btn btn-danger my-2 my-sm-0">Logout</button></a>
 	</nav>
 
-	<div class="container">
-        <a href="<?php echo site_url('Map/map_insert');?>"><button type="button" class="btn btn-primary">Add</button></a>
-        <table class="table" class="thead-dark">
-            <thead>
-                <tr>
-                    <th scope="col">Number</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Description</th>
-					<th scope="col">Img</th>
-					<th scope="col">Latitude</th>
-					<th scope="col">Logitude</th>
-					<th scope="col">Manager</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($data as $list) {
-    ?>
-                <tr>
-                    <td>
-                        <?php echo $list['map_number']; ?>
-                    </td>
-                    <td>
-                        <?php echo $list['map_name']; ?>
-                    </td>
-                    <td>
-                        <?php echo $list['map_description']; ?>
-                    </td>
-                    <td>
-						<img style='width:128px;height:128px;' src='../../img/<?php echo $list['map_img']; ?>'>
-                    </td>
-                    <td>
-                        <?php echo $list['map_latitude']; ?>
-                    </td>
-                    <td>
-                        <?php echo $list['map_logitude']; ?>
-                    </td>
-                    <td>
-                        <a href="<?php echo site_url('Map/map_edit') ?>/<?php echo $list['map_number']; ?>">
-                            <button class="btn btn-info">Edit</button>
-                        </a>
-                        <a href="<?php echo site_url('Map/map_delete') ?>/<?php echo $list['map_number']; ?>">
-                            <button class="btn btn-danger">Delete</button>
-                        </a>
-                    </td>
-                </tr>
-                <?php
-} ?>
-            </tbody>
-        </table>
+    <div class="container" style="margin-top: 30px;">
+        <?php echo form_open_multipart('Map/map_insert_process') ?>
+        <div class="form-group">
+			Name
+            <input required class="form-control" type="text" name="map_name">
+            <br> Description
+            <input required class="form-control" type="text" name="map_description">
+            <br>
+            Img
+            <input type="file" name="map_img" class="form-control"/>
+            <br> Latitude
+            <input required class="form-control" type="text" name="map_latitude">
+            <br> Logitude 
+            <input required class="form-control" type="text" name="map_logitude">
+            <br>
+        </div>
+        <button type="submit" class="btn btn-success">Add</button>
+        <?php echo form_close() ?>
     </div>
 
 	<!-- Bootstrap core JavaScript
