@@ -25,11 +25,12 @@ class News extends CI_Controller
             $error = array('error' => $this->upload->display_errors());
             $this->load->view('news_error', $error);
         } else {
+            $img_path = 'img/'.$this->upload->data('file_name');
             $input = array(
             'news_number'=>$this->input->post('news_number'),
             'news_header'=>$this->input->post('news_header'),
             'news_description'=>$this->input->post('news_description'),
-            'news_img'=>$this->upload->data('file_name'),
+            'news_img'=>$img_path,
         );
             $this->News_model->news_insert_process($input);
             redirect('News/news_list');
@@ -62,7 +63,7 @@ class News extends CI_Controller
         if (!$this->upload->do_upload('news_img')) {
             $image = $this->input->post('news_img_old');
         } else {
-            $image=$this->upload->data('file_name');
+            $image = 'img/'.$this->upload->data('file_name');
         }
 
         $input = array(

@@ -26,10 +26,11 @@ class Map extends CI_Controller
             $error = array('error' => $this->upload->display_errors());
             $this->load->view('map_error', $error);
         } else {
+            $img_path = 'img/'.$this->upload->data('file_name');
             $input = array(
             'map_name'=>$this->input->post('map_name'),
             'map_description'=>$this->input->post('map_description'),
-            'map_img'=>$this->upload->data('file_name'),
+            'map_img'=>$img_path,
             'map_latitude'=>$this->input->post('map_latitude'),
             'map_logitude'=>$this->input->post('map_logitude'),
         );
@@ -63,7 +64,8 @@ class Map extends CI_Controller
         if (!$this->upload->do_upload('map_img')) {
             $image = $this->input->post('map_img_old');
         } else {
-            $image=$this->upload->data('file_name');
+            $image = 'img/'.$this->upload->data('file_name');
+
         }
 
         $input = array(
@@ -76,9 +78,5 @@ class Map extends CI_Controller
         );
         $this->Map_model->map_edit_process($input);
         redirect('Map/map_list');
-    }
-    public function map_api(){
-        $data = $this->Map_model->map_list();
-        $this->load->view('map_api',$data);
     }
 }

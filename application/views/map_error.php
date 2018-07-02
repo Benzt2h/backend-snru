@@ -33,8 +33,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <a class="nav-item nav-link" href="<?php echo site_url('Admin/admin_list');?>">Admin</a>
                 <a class="nav-item nav-link" href="<?php echo site_url('Map/map_list');?>">Map</a>
                 <a class="nav-item nav-link" href="<?php echo site_url('News/news_list');?>">News</a>
-                <a class="nav-item nav-link" href="<?php echo site_url('Map/map_api');?>">Map API</a>
-                <a class="nav-item nav-link" href="<?php echo site_url('News/news_api');?>">News API</a>
+				<a class="nav-item nav-link" href="./../../map_api.php">Map API</a>
+				<a class="nav-item nav-link" href="./../../news_api.php">News API</a>
             </div>
         </div>
         <a href="<?php echo site_url('Welcome/logout');?>">
