@@ -1,5 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+    if ($this->session->userdata('admin_name')) {
+    } else {
+        redirect('Welcome/login');
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
