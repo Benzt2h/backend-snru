@@ -47,30 +47,27 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<div class="container marketing" style="margin-top: 30px;">
 		<div class="row">
 			<div class="col-lg-4">
-				<img class="rounded-circle" src="" alt="Generic placeholder image" width="140" height="140">
-				<h2>Heading</h2>
-				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id
-					elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+				<img class="rounded-circle" src="../../img_home/admin.png" width="140" height="140">
+				<h2>Admin</h2>
+				<p>Add,Delete and Edit information admin.</p>
 				<p>
-					<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+					<a class="btn btn-secondary" href="<?php echo site_url('Admin/admin_list');?>" role="button">Go &raquo;</a>
 				</p>
 			</div>
 			<div class="col-lg-4">
-				<img class="rounded-circle" src="" alt="Generic placeholder image" width="140" height="140">
-				<h2>Heading</h2>
-				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id
-					elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+				<img class="rounded-circle" src="../../img_home/Map.png" width="140" height="140">
+				<h2>Map</h2>
+				<p>Add,Delete and Edit Map data.</p>
 				<p>
-					<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+					<a class="btn btn-secondary" href="<?php echo site_url('Map/map_list');?>" role="button">Go &raquo;</a>
 				</p>
 			</div>
 			<div class="col-lg-4">
-				<img class="rounded-circle" src="" alt="Generic placeholder image" width="140" height="140">
-				<h2>Heading</h2>
-				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id
-					elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+				<img class="rounded-circle" src="../../img_home/News.png" width="140" height="140">
+				<h2>News</h2>
+				<p>Add,Delete and Edit News data.</p>
 				<p>
-					<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+					<a class="btn btn-secondary" href="<?php echo site_url('News/news_list');?>" role="button">Go &raquo;</a>
 				</p>
 			</div>
 		</div>
