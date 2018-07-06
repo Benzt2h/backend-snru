@@ -37,6 +37,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<a class="nav-item nav-link" href="../../news_api.php">News API</a>
 			</div>
 		</div>
+		<a>Hello,<?php echo $this->session->userdata('admin_name');?></a>
 		<a href="<?php echo site_url('Welcome/logout');?>">
 			<button type="button" class="btn btn-danger my-2 my-sm-0">Logout</button>
 		</a>
@@ -45,7 +46,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<div class="container marketing" style="margin-top: 30px;">
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-lg-4">
 				<img class="rounded-circle" src="" alt="Generic placeholder image" width="140" height="140">
 				<h2>Heading</h2>
 				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id
@@ -54,7 +55,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
 				</p>
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-4">
+				<img class="rounded-circle" src="" alt="Generic placeholder image" width="140" height="140">
+				<h2>Heading</h2>
+				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id
+					elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+				<p>
+					<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+				</p>
+			</div>
+			<div class="col-lg-4">
 				<img class="rounded-circle" src="" alt="Generic placeholder image" width="140" height="140">
 				<h2>Heading</h2>
 				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id

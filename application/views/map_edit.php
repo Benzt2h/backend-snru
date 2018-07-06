@@ -38,6 +38,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<a class="nav-item nav-link" href="./../../news_api.php">News API</a>
 			</div>
 		</div>
+		<a>Hello,<?php echo $this->session->userdata('admin_name');?></a>
 		<a href="<?php echo site_url('Welcome/logout');?>"><button type="button" class="btn btn-danger my-2 my-sm-0">Logout</button></a>
 	</nav>
 

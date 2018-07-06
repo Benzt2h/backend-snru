@@ -28,16 +28,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			<div class="navbar-nav">
-				<a class="nav-item nav-link active" href="<?php echo site_url('Welcome/index');?>">Home
-					<span class="sr-only">(current)</span>
-				</a>
-				<a class="nav-item nav-link" href="<?php echo site_url('Admin/admin_list');?>">Admin</a>
+				<a class="nav-item nav-link" href="<?php echo site_url('Welcome/index');?>">Home</a>
+				<a class="nav-item nav-link active" href="<?php echo site_url('Admin/admin_list');?>">Admin
+					<span class="sr-only">(current)</span></a>
 				<a class="nav-item nav-link" href="<?php echo site_url('Map/map_list');?>">Map</a>
 				<a class="nav-item nav-link" href="<?php echo site_url('News/news_list');?>">News</a>
 				<a class="nav-item nav-link" href="./../../map_api.php">Map API</a>
 				<a class="nav-item nav-link" href="./../../news_api.php">News API</a>
 			</div>
 		</div>
+		<a>Hello,<?php echo $this->session->userdata('admin_name');?></a>
 		<a href="<?php echo site_url('Welcome/logout');?>">
 			<button type="button" class="btn btn-danger my-2 my-sm-0">Logout</button>
 		</a>
@@ -52,7 +52,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<th scope="col">Id</th>
 					<th scope="col">Password</th>
 					<th scope="col">Name</th>
-					<th scope="col">Manager</th>
+					<th scope="col">Manage</th>
 				</tr>
 			</thead>
 			<tbody>

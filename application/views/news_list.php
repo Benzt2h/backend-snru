@@ -36,20 +36,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<a class="nav-item nav-link" href="./../../map_api.php">Map API</a>
 				<a class="nav-item nav-link" href="./../../news_api.php">News API</a>
 			</div>
-		</div>
+        </div>
+        <a>Hello,<?php echo $this->session->userdata('admin_name');?></a>
 		<a href="<?php echo site_url('Welcome/logout');?>"><button type="button" class="btn btn-danger my-2 my-sm-0">Logout</button></a>
 	</nav>
 
-	<div class="container">
+	<div class="container"  style="margin-top: 30px;">
         <a href="<?php echo site_url('News/news_insert');?>"><button type="button" class="btn btn-primary">Add</button></a>
         <table class="table" class="thead-dark">
             <thead>
                 <tr>
-                    <th scope="col">Number</th>
+                    <th scope="col">Id</th>
                     <th scope="col">Header</th>
-                    <th scope="col">Description</th>
-					<th scope="col">Img</th>
-					<th scope="col">Manager</th>
+                    <th scope="col">Detail</th>
+					<th scope="col">Image</th>
+					<th scope="col">Manage</th>
                 </tr>
             </thead>
             <tbody>
