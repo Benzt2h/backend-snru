@@ -30,22 +30,37 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="navbar-nav">
 				<a class="nav-item nav-link" href="<?php echo site_url('Welcome/index');?>">Home</a>
 				<a class="nav-item nav-link active" href="<?php echo site_url('Admin/admin_list');?>">Admin
-					<span class="sr-only">(current)</span></a>
+					<span class="sr-only">(current)</span>
+				</a>
 				<a class="nav-item nav-link" href="<?php echo site_url('Map/map_list');?>">Map</a>
 				<a class="nav-item nav-link" href="<?php echo site_url('News/news_list');?>">News</a>
 				<a class="nav-item nav-link" href="./../../map_api.php">Map API</a>
 				<a class="nav-item nav-link" href="./../../news_api.php">News API</a>
 			</div>
 		</div>
-		<a>Hello,<?php echo $this->session->userdata('admin_name');?></a>
+		<a>Hello,
+			<?php echo $this->session->userdata('admin_name');?>
+		</a>
 		<a href="<?php echo site_url('Welcome/logout');?>">
 			<button type="button" class="btn btn-danger my-2 my-sm-0">Logout</button>
 		</a>
 	</nav>
 
-
+	<h3 class="container" style="margin-top: 30px;">Admin</h3>
 	<div class="container" style="margin-top: 30px;">
-		<a href="<?php echo site_url('Admin/admin_insert');?>"><button type="button" class="btn btn-primary">Add</button></a>
+		<div class="row">
+			<div class="col-lg-4">
+				<a href="<?php echo site_url('Admin/admin_insert');?>">
+					<button type="button" class="btn btn-primary">Add</button>
+				</a>
+			</div>
+			<div class="col-lg-4">
+				<?php echo form_open('Admin/admin_search');?>
+				<input class="form-control" type="text" name="search">
+			</div>
+			<button type="submit" class="btn btn-success">Search</button>
+			<?php echo form_close();?>
+		</div>
 		<table class="table" class="thead-dark">
 			<thead>
 				<tr>
@@ -56,7 +71,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach ($data as $list) { ?>
+				<?php foreach ($data as $list) {
+    ?>
 				<td>
 					<?php echo $list['admin_id']; ?>
 				</td>
@@ -67,11 +83,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<?php echo $list['admin_name']; ?>
 				</td>
 				<td>
-					<a href="<?php echo site_url('Admin/admin_edit');?>/<?php echo $list['admin_id'];?>"><button type="button" class="btn btn-warning">Edit</button></a>
-					<a href="<?php echo site_url('Admin/admin_delete');?>/<?php echo $list['admin_id'];?>"><button type="button" class="btn btn-danger">Delete</button></a>
+					<a href="<?php echo site_url('Admin/admin_edit'); ?>/<?php echo $list['admin_id']; ?>">
+						<button type="button" class="btn btn-warning">Edit</button>
+					</a>
+					<a href="<?php echo site_url('Admin/admin_delete'); ?>/<?php echo $list['admin_id']; ?>">
+						<button type="button" class="btn btn-danger">Delete</button>
+					</a>
 				</td>
 			</tbody>
-			<?php } ?>
+			<?php
+} ?>
 		</table>
 	</div>
 
@@ -85,4 +106,5 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
 	 crossorigin="anonymous"></script>
 </body>
+
 </html>

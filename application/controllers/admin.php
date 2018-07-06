@@ -45,4 +45,11 @@ class Admin extends CI_Controller
         $this->Admin_model->admin_edit_process($input);
         redirect('Admin/admin_list');
     }
+
+    public function admin_search(){
+        $input = $this->input->post('search');
+        $data['data'] = $this->Admin_model->admin_search($input);
+        $this->load->view('admin_list', $data);
+
+    }
 }

@@ -79,4 +79,11 @@ class Map extends CI_Controller
         $this->Map_model->map_edit_process($input);
         redirect('Map/map_list');
     }
+    
+    public function map_search(){
+        $input = $this->input->post('search');
+        $data['data'] = $this->Map_model->map_search($input);
+        $this->load->view('map_list', $data);
+
+    }
 }

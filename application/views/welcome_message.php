@@ -43,7 +43,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</a>
 	</nav>
 
-
+	<h3 class="container" style="margin-top: 30px;">Home</h3>
 	<div class="container marketing" style="margin-top: 30px;">
 		<div class="row">
 			<div class="col-lg-4">

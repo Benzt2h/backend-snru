@@ -75,4 +75,11 @@ class News extends CI_Controller
         $this->News_model->news_edit_process($input);
         redirect('News/news_list');
     }
+
+    public function news_search(){
+        $input = $this->input->post('search');
+        $data['data'] = $this->News_model->news_search($input);
+        $this->load->view('news_list', $data);
+
+    }
 }

@@ -31,4 +31,11 @@ class Admin_model extends CI_Model
         $query = $this->db->get_where('admin', array('admin_id'=>$input['admin_id'],'admin_password'=>$input['admin_password']));
         return $query;
     }
+    public function admin_search($input){
+        $this->db->like('admin_id',$input);
+        $this->db->or_like('admin_name',$input);
+        $query = $this->db->get('admin');
+        return $query->result_array();
+
+    }
 }

@@ -21,5 +21,13 @@ class News_model extends CI_Model
         $this->db->update('news', $input, 'news_number='.$input['news_number']);
 
     }
+    public function news_search($input){
+         $this->db->like('news_number', $input);
+        $this->db->or_like('news_header', $input);
+        $this->db->or_like('news_description', $input);
+        $query = $this->db->get('news');
+        return $query->result_array();
+
+    }
 }
 ?>

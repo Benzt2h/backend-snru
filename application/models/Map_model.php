@@ -19,5 +19,13 @@ class Map_model extends CI_Model{
     public function map_edit_process($input){
         $this->db->update('map', $input, 'map_number='.$input['map_number']);
     }
+    public function map_search($input){
+        $this->db->like('map_number', $input);
+        $this->db->or_like('map_name', $input);
+        $this->db->or_like('map_description', $input);
+        $query = $this->db->get('map');
+        return $query->result_array();
+
+    }
 }
 ?>
