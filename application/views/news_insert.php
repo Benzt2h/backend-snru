@@ -46,7 +46,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			Header
             <input required class="form-control" type="text" name="news_header">
             <br> Description
-            <input required class="form-control" type="text" name="news_description">
+            <textarea required class="form-control" type="text" name="news_description"></textarea>
             <br>
             Img
             <input type="file" name="news_img" class="form-control"/>

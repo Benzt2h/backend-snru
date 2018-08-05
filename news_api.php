@@ -18,7 +18,7 @@ $json_return = array();
  "news_number" => $row["news_number"],
  "news_header" => $row["news_header"],
  "news_description" => $row["news_description"],
- "news_img" => $row["news_img"]
+ "news_img" => "http://www.lmtznetwork.info/backend-snru/".$row["news_img"]
  )
  );
  }

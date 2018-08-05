@@ -18,11 +18,12 @@ $json_return = array();
  "map_number" => $row["map_number"],
  "map_name" => $row["map_name"],
  "map_description" => $row["map_description"],
- "map_img" => $row["map_img"],
+ "map_img" => "http://www.lmtznetwork.info/backend-snru/".$row["map_img"],
  "map_latitude" => $row["map_latitude"],
  "map_logitude" => $row["map_logitude"]
  )
  );
  }
+
  echo json_encode($json_return);
 ?>

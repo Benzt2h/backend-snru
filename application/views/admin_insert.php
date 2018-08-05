@@ -46,7 +46,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             ID
             <input required  pattern="{20}" class="form-control" type="text" name="admin_id">
             <br> Password
-            <input required pattern="{20}" class="form-control" type="password" name="admin_password">
+            <input required pattern="{20}" class="form-control" type="text" name="admin_password">
             <br> Name
             <input required class="form-control" type="text" name="admin_name">
             <br>

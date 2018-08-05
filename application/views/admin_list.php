@@ -46,6 +46,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</a>
 	</nav>
 
+<h1 class="text-center" >SNRU Maps and News</h1>
+
 	<h3 class="container" style="margin-top: 30px;">Admin</h3>
 	<div class="container" style="margin-top: 30px;">
 		<div class="row">

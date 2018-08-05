@@ -47,7 +47,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			Header
             <input required class="form-control" type="text" name="news_header" value="<?php echo $data[0]['news_header']?>">
             <br> Description
-            <input required class="form-control" type="text" name="news_description" value="<?php echo $data[0]['news_description']?>">
+            <textarea required class="form-control" type="text" name="news_description" value="<?php echo $data[0]['news_description']?>"><?php echo $data[0]['news_description']?></textarea>
             <br>
             <input type="hidden" name="news_img_old" value="<?php echo $data[0]['news_img'];?>">
             Img

@@ -46,7 +46,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			Name
             <input required class="form-control" type="text" name="map_name">
             <br> Description
-            <input required class="form-control" type="text" name="map_description">
+            <textarea required class="form-control" type="text-ara" name="map_description"></textarea>
             <br>
             Img
             <input type="file" name="map_img" class="form-control"/>
