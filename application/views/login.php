@@ -25,6 +25,7 @@
         <?php echo form_open('Welcome/login_process') ?>
         <div class="text-center mb-4">
             <img class="mb-4" src="../../img_home/Logo.png" alt="" width="140">
+            <h1 class="h3 mb-3 font-weight-normal">SNRU Maps and News</h1>
             <h1 class="h3 mb-3 font-weight-normal">Login</h1>
             <h3 class="h3 mb-3 font-weight-normal">
             </h3>
