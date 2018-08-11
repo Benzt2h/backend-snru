@@ -21,6 +21,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 
 <body>
+    	<div class="container-fluid bg-dark">
+		<header class="blog-header py-3">
+			<div class="col-12 text-center">
+				<h1 class="blog-header-logo text-white">SNRU Maps and News</h1>
+			</div>
+		</header>
+	</div>
+	
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
 		 aria-expanded="false" aria-label="Toggle navigation">
