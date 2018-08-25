@@ -8,6 +8,7 @@ $userName = "root";
 $userPassword = "";
 $dbName = "snru";
 $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
+$conn->set_charset("utf8");
 $sql = "SELECT * FROM map";
 $query = mysqli_query($conn,$sql);
 #### array
@@ -19,7 +20,7 @@ $map_arr["data"]=array();
  "map_number" => $row["map_number"],
  "map_name" => $row["map_name"],
  "map_description" => $row["map_description"],
- "map_img" => "http://www.lmtznetwork.info/backend-snru/".$row["map_img"],
+ "map_img" => "http://192.168.43.33/backend-snru/".$row["map_img"],
  "map_latitude" => $row["map_latitude"],
  "map_logitude" => $row["map_logitude"]
  );

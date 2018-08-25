@@ -8,6 +8,7 @@ $userName = "root";
 $userPassword = "";
 $dbName = "snru";
 $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
+$conn->set_charset("utf8");
 $sql = "SELECT * FROM news";
 $query = mysqli_query($conn,$sql);
 #### array
