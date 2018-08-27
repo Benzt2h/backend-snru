@@ -59,7 +59,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <textarea required class="form-control" type="text" name="map_description" value="<?php echo $data[0]['map_description']?>"><?php echo $data[0]['map_description']?></textarea>
             <br>
             <input type="hidden" name="map_img_old" value="<?php echo $data[0]['map_img'];?>">
-            Img
+            Image(.jpg,.png)
             <?php 
                         $image_properties = array(
                         'src'   => $data[0]['map_img'],

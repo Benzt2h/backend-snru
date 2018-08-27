@@ -56,7 +56,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <br> Description
             <textarea required class="form-control" type="text-ara" name="map_description"></textarea>
             <br>
-            Img
+            Image(.jpg,.png)
             <input type="file" name="map_img" class="form-control"/>
             <br> Latitude
             <input required class="form-control" type="text" name="map_latitude">

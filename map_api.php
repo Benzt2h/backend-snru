@@ -8,7 +8,7 @@ $userName = "root";
 $userPassword = "";
 $dbName = "snru";
 $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
-$conn->set_charset("utf8");
+mysqli_set_charset($conn,"utf8");
 $sql = "SELECT * FROM map";
 $query = mysqli_query($conn,$sql);
 #### array

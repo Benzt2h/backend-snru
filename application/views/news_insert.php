@@ -56,7 +56,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <br> Description
             <textarea required class="form-control" type="text" name="news_description"></textarea>
             <br>
-            Img
+            Image(.jpg,.png)
             <input type="file" name="news_img" class="form-control"/>
             <br>
         </div>

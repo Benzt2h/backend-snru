@@ -16,7 +16,7 @@ class Map extends CI_Controller
     public function map_insert_process()
     {
         $config['upload_path']          = './img/';
-        $config['allowed_types']        = 'gif|jpg|png';
+        $config['allowed_types']        = 'jpg|png';
         $config['max_size']             = 0;
         $config['max_width']            = 0;
         $config['max_height']           = 0;
@@ -55,7 +55,7 @@ class Map extends CI_Controller
     public function map_edit_process()
     {
         $config['upload_path']          = './img/';
-        $config['allowed_types']        = 'gif|jpg|png';
+        $config['allowed_types']        = 'jpg|png';
         $config['max_size']             = 0;
         $config['max_width']            = 0;
         $config['max_height']           = 0;
