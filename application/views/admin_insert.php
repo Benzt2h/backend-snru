@@ -59,7 +59,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <input required class="form-control" type="text" name="admin_name">
             <br>
         </div>
-        <button type="submit" class="btn btn-success">เพิ่มข้อมูล</button>
+        <button type="submit" class="btn btn-success">Add</button>
         <?php echo form_close() ?>
     </div>
 
