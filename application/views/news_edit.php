@@ -61,7 +61,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             Image(.jpg,.png)
             <?php 
                         $image_properties = array(
-                        'src'   => 'img/'.$data[0]['news_img'],
+                        'src'   => $data[0]['news_img'],
                         'class' => 'post_images',
                         'width' => '128',
                         'height'=> '128',
